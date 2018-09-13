@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="demotest-consumer" owner="programmer" organization="dubbox"/>
+
+    <!--向zookeeper订阅provider的地址,由zookeeper定时推送-->
+    <!--<dubbo:registry address="zookeeper://localhost:2181"/>-->
+    <dubbo:registry address="redis://localhost:6379"/>
+    <!--使用dubbo协议调用定义好的api.PermissionService接口-->
+    <dubbo:reference id="demoService" interface="com.miracle.dubbo.demo.api.DemoService"/>
+</beans>

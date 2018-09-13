@@ -1,0 +1,33 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+    <filter-name>myFilter</filter-name>
+    <filter-class>com.miracle.javademo.servlet.filter.MyFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>myFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+    <servlet-name>myServlet</servlet-name>
+    <servlet-class>com.miracle.javademo.servlet.servlet.MyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>myServlet</servlet-name>
+    <url-pattern>/user/*</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>teacherServlet</servlet-name>
+    <servlet-class>com.miracle.javademo.servlet.servlet.TeacherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>teacherServlet</servlet-name>
+    <url-pattern>/teacher/*</url-pattern>
+  </servlet-mapping>
+</web-app>
