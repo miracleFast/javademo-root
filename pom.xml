@@ -8,6 +8,7 @@
     <artifactId>javademo-root</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>mybatis</module>
         <module>ldap</module>
@@ -21,6 +22,4 @@
         <module>shiro</module>
         <module>activiti</module>
     </modules>
-
-
 </project>
